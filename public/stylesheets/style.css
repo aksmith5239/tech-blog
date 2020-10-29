@@ -1,10 +1,14 @@
 :root {
     --blue: #04328c;
-    --lt-blue: #049DD9;
-    --pink: #f26b83;
+    --lt-blue:#0496ffff;
+    --lighter-blue: #ADDDFF;
+    --ruby: #d81159ff;
     --yellow: #f2b807;
+    --light-yellow: #FEF4D7;
     --dark: #010726;
     --light: #eef2ea;
+    --magenta:   #8f2d56ff;
+
 }
 
 *{
@@ -33,7 +37,7 @@ a {
     font-weight: bold;
 }
 a:hover{
-    color: var(--pink);
+    color: var(--ruby);
 }
 .wrapper {
     width: 100%;
@@ -53,7 +57,12 @@ a:hover{
 }
 
 .btn-alert {
-    background-color: var(--pink);
+    background-color: var(--ruby);
+}
+
+.comment {
+    background-color: var(--light-yellow);
+    color: var(--dark);
 }
 
 nav {
@@ -61,8 +70,8 @@ nav {
 }
 
 footer {
-    background-color: var(--pink);
-    color: var(--dark);
+    background-color: var(--blue);
+    color: var(--yellow);
     font-size: 1em;
     text-align: center;
 }
