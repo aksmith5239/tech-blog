@@ -39,8 +39,7 @@ a {
     font-weight: bold;
 }
 a:hover{
-    background-color: var(--accent);
-    color:var(--dark);
+    color:var(--accent);
 }
 .wrapper {
     width: 100%;
@@ -73,7 +72,17 @@ a:hover{
 .post-title {
     color: var(--primary);
 }
-
+.post-list {
+    margin: 10px;
+}
+.post-info a {
+    font-size: 1em;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+li {
+    border-bottom: .5px solid var(--medium);
+}
 .comment {
     padding: 1%;
     margin-bottom: 1%;
