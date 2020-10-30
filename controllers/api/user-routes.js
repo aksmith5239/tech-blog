@@ -49,9 +49,33 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     });
 });
+//login
+router.post('/login', (req, res) => {
+    //query operation goes here
+    User.findOne({
+        where: {
+            email: req.body.email
+        }
+    })
+    .then(dbUserData => {
+        if(!dbUserData) {
+            res.status(400).json({message: "There is not a user with this email address"});
+            return;
+        }
+        //verify the user
+        const validPassword = dbUserData.checkPassword(req.body.password);
+        if(!validPassword) {
+            res.status(400).json({message: "Please enter correct password!"});
+            return;
+        }
+         res.json({user: dbUserData, message: "Thank you for loggin in!"});
+    });
+});
+
 //put/ update users
 router.put('/:id', (req, res) => {
     User.update(req.body, {
+        individualHooks: true,
         where: {
             id: req.params.id
         }
