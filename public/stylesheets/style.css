@@ -1,13 +1,10 @@
 :root {
-    --blue: #04328c;
-    --lt-blue:#0496ffff;
-    --lighter-blue: #ADDDFF;
-    --ruby: #d81159ff;
-    --yellow: #f2b807;
-    --light-yellow: #FEF4D7;
-    --dark: #010726;
-    --light: #eef2ea;
-    --magenta:   #8f2d56ff;
+    --dark: #293251;
+    --light: #ebf1f2;
+    --medium: #98c1d9; 
+    --primary: #3d5a80;
+    --accent: #EE6c4d;
+
 
 }
 
@@ -19,8 +16,8 @@
 }
 
 header {
-    background-color: var(--lt-blue);
-    color: var(--dark);
+    background-color: var(--primary);
+    color: var(--light);
     font-weight: bolder;
     padding: 20px;
     border-bottom: 1px solid var(--light);
@@ -29,7 +26,12 @@ header {
     align-items: center;
     
 }
-
+h1,h2,h3,h4,h5 {
+    padding: 5px;
+}
+.banner {
+    background-color: var(--accent);
+}
 a {
     text-decoration: none;
     color: var(--yellow);
@@ -37,7 +39,8 @@ a {
     font-weight: bold;
 }
 a:hover{
-    color: var(--ruby);
+    background-color: var(--accent);
+    color:var(--dark);
 }
 .wrapper {
     width: 100%;
@@ -47,31 +50,85 @@ a:hover{
     display: flex;
     flex-direction: column;
 }
-.blog-banner {
-    background-color: var(--blue);
-    color: var(--yellow);
-}
 
-.btn-submit {
-    background-color: #f2b807;
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--light);
+    padding: .25em;
+    /* border: 0.16em solid var(--light); */
+    border-radius: 5px;
+    margin:5px;
+
+}
+.btn:hover {
+    margin:5px;
+    background-color: var(--accent);
+    color: var(--dark);
 }
 
 .btn-alert {
     background-color: var(--ruby);
 }
-
-.comment {
-    background-color: var(--light-yellow);
-    color: var(--dark);
+.post-title {
+    color: var(--primary);
 }
 
+.comment {
+    padding: 1%;
+    margin-bottom: 1%;
+    color: var(--dark);
+    font-size: 1.25em;
+}
+.comment:nth-child(odd) {
+    background-color: var(--light);
+}
+
+.comment ol{
+    list-style:none;
+}
+.comment-text {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+.comment-by {
+    
+    font-size: 1em;
+}
 nav {
     justify-content: space-around;
 }
 
+.post {
+    padding: 5px;
+    margin: 5px;
+}
+
+.post-form input{
+    min-width: 40%;
+    min-height: 30px;
+}
+.login {
+    padding: 5px;
+    margin: 5px;
+}
+.login-form input{
+    min-width: 30%;
+    margin: 5px;
+}
+li {
+    list-style: none;
+}
+textarea {
+    border-radius: 5px;
+    border: 1px solid var(--medium);
+    min-width: 50%;
+    min-height: 100px;
+}
+
 footer {
-    background-color: var(--blue);
-    color: var(--yellow);
+    background-color: var(--medium);
+    color: var(--dark);
     font-size: 1em;
     text-align: center;
 }

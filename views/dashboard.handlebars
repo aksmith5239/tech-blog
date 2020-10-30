@@ -1,0 +1,32 @@
+ <div>
+            <section class="wrapper">
+                <h2 class='banner'>Enter New Post</h2>
+                    <div class="login">
+                    <form class="login-form">
+                        <div>
+                            <label for="post-title">Post Title</label><br>
+                            <input  class="login" type="text" id="post-title" name="post-title" />    
+                        </div>
+                        <div>
+                            <label for="post-url">Post Link</label><br>
+                            <input  class="login" type="text" id="post-url" name="post-url" />
+                        </div>
+                        
+                        <button type="button" class="btn">Create Post</button>
+                    </form>
+                </div>
+            </section>
+    </div>
+        <div>
+        
+            <section class="wrapper">
+                <h2 class='banner'>Your Great Posts!</h2>
+                <ol>
+                    <li class="comment">
+                        <h4>Post Title</h4>
+                        <span >Post Comments go here</span><br>
+                        <button class="btn"><a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a></button>
+                    </li>
+                </ol>
+            </section>
+            </div>

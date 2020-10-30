@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang = "en">
 
@@ -9,23 +10,146 @@
 </head>
 
 <body>
-    <div >
+    
         <header>
-            <h1>Let's Tech Blog!</h1>
+            <h1>Let's Blog Tech!</h1>
             <nav >
                 <a href="#">Login</a>  &nbsp;
                 <a href="#">Logout</a> &nbsp;
                 <a href="#">Dashboard</a> &nbsp;
             </nav>
         </header>  
-        <main class="wrapper">
-            <div>
-                
-              
+        <!--login-->
+        <div>
+            <section class="wrapper">
+                        <h2 class='banner'>Login</h2>
+                        <div class="login">
+                        <form class="login-form">
+                            <div>
+                                <label for="post-title">Email</label><br>
+                                <input  class="login" type="text" id="email" name="email" />
+                            </div>
+                            <div>
+                                <label for="password">Password</label><br>
+                                <input  type="text" id="password" name="password" />
+                            </div>
+                            <button type="button" class="btn">Login</button>
+                        </form>
+                    </div>
+                    </section>
             </div>
-        </main> 
-        <footer>
-            Keep on blogging!
-        </footer>
+         <div>
+                <section class="wrapper">
+                        <h2 class='banner'>Sign Up</h2>
+                        <div class="login">
+                        <form class="login-form">
+                            <div>
+                                <label for="post-title">Email</label><br>
+                                <input  class="login" type="text" id="email" name="email" />
+                            </div>
+                            <div>
+                                <label for="post-title">Username</label><br>
+                                <input  class="login" type="text" id="username" name="username" />
+                            </div>
+                            <div>
+                                <label for="password">Password</label><br>
+                                <input  class="login" type="text" id="password" name="password" />
+                            </div>
+                            <button type="button" class="btn">Sign Up</button>
+                        </form>
+                    </div>
+                </section>
+        </div>
+        <!--dashboard-->
+        <div>
+            <section class="wrapper">
+                <h2 class='banner'>Enter New Post</h2>
+                    <div class="login">
+                    <form class="login-form">
+                        <div>
+                            <label for="post-title">Post Title</label><br>
+                            <input  class="login" type="text" id="post-title" name="post-title" />    
+                        </div>
+                        <div>
+                            <label for="post-url">Post Link</label><br>
+                            <input  class="login" type="text" id="post-url" name="post-url" />
+                        </div>
+                        
+                        <button type="button" class="btn">Create Post</button>
+                    </form>
+                </div>
+            </section>
     </div>
-</body>        
+        <div>
+        
+            <section class="wrapper">
+                <h2 class='banner'>Your Great Posts!</h2>
+                <ol>
+                    <li class="comment">
+                        <h4>Post Title</h4>
+                        <span >Post Comments go here</span><br>
+                        <button class="btn"><a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a></button>
+                    </li>
+                </ol>
+            </section>
+            </div>
+    <!--homepage-->
+    <div>
+        <section class = "wrapper">
+            <li>
+                <div class="comment-text">
+                    <p>This is a really cool blog post</p>
+                </div>
+                <div class="comment-by">
+                    <p>username created on date</p>
+                </div>
+            </li>
+            
+        </section>
+        </div>
+<!--single-->
+<div>
+    <section class="wrapper">
+        <h2 class='banner'>Add Comments</h2>
+        <div>
+           
+                <h4>Post Comment</h4>
+                <textarea >Post Comments go here</textarea><br>
+                <button type="button" class="btn">Submit Comment</button>
+            </div>  
+       
+    </section>
+    </div>
+<!--edit-->
+
+        <div>
+            <section class="wrapper">
+            <div>
+            <h2 class='banner'>Edit Post</h2>
+            <div class="logint">
+                <form class="login-form">
+        <div>
+            <label for="post-title">Post Title</label><br>
+            <input  class="login" type="text" id="post-title" name="post-title" />
+        </div>
+        <div>
+            <label for="post-url">Post Link</label><br>
+            <input  class="login"type="text" id="post-url" name="post-url" />
+        </div>
+        <div>
+            <label for="post-comment">Comments</label><br>
+            <textarea >Edit Comments go here</textarea><br>
+        </div>
+        <button type="button" class="btn">Edit Post</button>
+        </form>            
+        </div>  
+               
+    </section>
+</div>
+        
+       
+<footer>
+    Keep on blogging!
+</footer>
+
+</body> 
