@@ -56,7 +56,13 @@ router.post('/', (req, res) => {
         password: req.body.password
     })
     .then(dbUserData => {
-        res.json(dbUserData)
+        req.session.save(() => {
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+
+            res.json(dbUserData)
+        });
     })
     .catch(err => {
         console.log(err);
@@ -82,10 +88,27 @@ router.post('/login', (req, res) => {
             res.status(400).json({message: "Please enter correct password!"});
             return;
         }
-         res.json({user: dbUserData, message: "Thank you for loggin in!"});
+
+        req.session.save(() => {
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+
+            res.json({user: dbUserData, message: "Thank you! You are logged in!"});
+        }); 
     });
 });
 
+router.post('/logout', (req, res) => {
+    if(req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    }
+    else {
+        res.status(404).end();
+    }
+})
 //put/ update users
 router.put('/:id', (req, res) => {
     User.update(req.body, {

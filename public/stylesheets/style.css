@@ -67,7 +67,24 @@ a:hover{
 }
 
 .btn-alert {
+    color:var(--accent);
     background-color: var(--ruby);
+}
+
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--yellow);
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+.btn-no-style:hover {
+    color:var(--accent);
 }
 .post-title {
     color: var(--primary);
@@ -122,6 +139,10 @@ nav {
     margin: 5px;
 }
 .login-form input{
+    min-width: 30%;
+    margin: 5px;
+}
+.signup-form input {
     min-width: 30%;
     margin: 5px;
 }
