@@ -149,7 +149,7 @@ nav {
     min-width: 40%;
     min-height: 30px;
 }
-.login {
+.login, .new-post{
     padding: 5px;
     margin: 5px;
 }
@@ -161,6 +161,11 @@ nav {
     min-width: 30%;
     margin: 5px;
 }
+.new-post-form input{
+    min-width: 40%;
+    margin: 5px;
+}
+
 .center-text {
     text-align: center;
     color: var(--dark);

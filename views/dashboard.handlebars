@@ -1,32 +1,39 @@
  <div>
+     <h2 class="center-text">Welcome </h2>
             <section class="wrapper">
                 <h2 class='banner'>Enter New Post</h2>
                     <div class="login">
-                    <form class="login-form">
+                    <form class="new-post-form">
                         <div>
                             <label for="post-title">Post Title</label><br>
-                            <input  class="login" type="text" id="post-title" name="post-title" />    
+                            <input  class="new-post" type="text" id="post-title" name="post-title" />    
                         </div>
                         <div>
                             <label for="post-url">Post Link</label><br>
-                            <input  class="login" type="text" id="post-url" name="post-url" />
+                            <input  class="new-post" type="text" id="post-url" name="post-url" />
                         </div>
                         
-                        <button type="button" class="btn">Create Post</button>
+                        <button type="submit" class="btn">Create Post</button>
                     </form>
                 </div>
             </section>
     </div>
         <div>
-        
+            <!--this is not working! -->
+        {{#if posts.length}}
             <section class="wrapper">
-                <h2 class='banner'>Your Great Posts!</h2>
+                <h2 class='banner'>Great Posts By {{user.username}}</h2>
+                {{#each posts as |post|}}
                 <ol>
                     <li class="comment">
-                        <h4>Post Title</h4>
-                        <span >Post Comments go here</span><br>
-                        <button class="btn"><a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a></button>
+                        {{> post-info post}}
+                        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
                     </li>
+                    {{/each}}
                 </ol>
             </section>
+            {{/if}}
+            
+        <script src="/javascript/add-post.js"></script>
+       
             </div>
