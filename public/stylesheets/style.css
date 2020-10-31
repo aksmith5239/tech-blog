@@ -165,6 +165,12 @@ nav {
     text-align: center;
     color: var(--dark);
 }
+
+.smaller-text {
+    font-size: .75em;
+
+}
+
 li {
     list-style: none;
 }
