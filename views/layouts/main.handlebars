@@ -9,16 +9,24 @@
 </head>
 
 <body>
+    
      <header>
+        
         <h1><a href="/">My Tech Blog</a></h1>
             <nav >
-                <a href="/signup">Sign Up</a>  &nbsp;
-                <a href="/login">Login</a>  &nbsp;
+                
+                {{#if loggedIn}}
                 <button id="logout" class="btn-no-style">Logout</button> &nbsp;
+                {{else}}
+                <a href="/login">Login</a>  &nbsp;
+                <a href="/signup">Sign Up</a>  &nbsp;
+                {{/if}}
                 <a href="#">Dashboard</a> &nbsp;
                 <a href="/">Home</a> &nbsp;
             </nav>
-    </header>  
+            
+    </header> 
+    
         <main>
             <div>
               {{{ body }}}
@@ -28,5 +36,7 @@
             Keep on blogging!
         </footer>
     </div>
+    {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body> 

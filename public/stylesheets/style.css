@@ -17,8 +17,10 @@
 }
 
 header {
-    background-color: var(--primary);
-    color: var(--light);
+    position:relative;
+    background: url("tech-blog.png");
+    /* color:var(--dark); */
+
     font-weight: bolder;
     padding: 20px;
     border-bottom: 1px solid var(--light);
@@ -27,6 +29,9 @@ header {
     align-items: center;
     
 }
+
+
+
 h1,h2,h3,h4,h5 {
     padding: 5px;
 }
@@ -130,6 +135,9 @@ li {
 
 nav {
     justify-content: space-around;
+    
+    /* background-color: var(--medium);
+    opacity: .75; */
 }
 
 .post {
@@ -152,6 +160,10 @@ nav {
 .signup-form input {
     min-width: 30%;
     margin: 5px;
+}
+.center-text {
+    text-align: center;
+    color: var(--dark);
 }
 li {
     list-style: none;
