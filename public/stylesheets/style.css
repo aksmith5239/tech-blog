@@ -140,4 +140,5 @@ footer {
     color: var(--dark);
     font-size: 1em;
     text-align: center;
+    padding: 10px;
 }
