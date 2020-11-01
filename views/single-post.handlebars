@@ -1,15 +1,4 @@
-{{!-- <article class="post">
-    <div class="post-title">
-        <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-        <span>({{post.post_url}})</span>
-    </div>
-    <div class="post-info">
-        Created By: <span style="font-weight: bold;">{{post.user.username}}</span> on {{post.created_at}}
-        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-                
-     </div>
-</article>      --}}
-{{> post-info post}}
+{{> single-post-info post}}
      {{#if loggedIn}}
      <form class='comment-form'>
          <div>
@@ -24,3 +13,4 @@
      {{#if loggedIn}} 
      <script src="/javascript/comment.js"></script>    
      {{/if}}  
+ <p>{{post_content}}</p>

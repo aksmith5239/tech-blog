@@ -3,10 +3,6 @@ const sequelize = require('../config/connection');
 const {Post, User, Comment} = require('../models');
 
 router.get('/', (req, res) => {
-    res.render('dashboard', {loggedIn: true});
-});
-
-router.get('/', (req, res) => {
     Post.findAll({
       where: {
         // use the ID from the session
@@ -14,7 +10,6 @@ router.get('/', (req, res) => {
       },
       attributes: [
         'id',
-        'post_url',
         'title',
         'created_at'
       ],
