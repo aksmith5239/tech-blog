@@ -6,11 +6,24 @@ const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ helpers });
 const sequelize = require('./config/connection');
 const session = require('express-session');
-
+// const cookieSession = require('cookie-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+// app.use(express.cookieParser());
+
+
+// const sess = cookieSession({
+//     secret: process.env.SECRET,
+//     resave: false,
+//     cookie: {
+//         secureProxy: true,
+//         httpOnly: true,
+//         domain: "https://my-tech-blog-2020.herokuapp.com/",
+//         expires: expiryDate
+//     }
+// })
 
 const sess = {
-    secret: process.env.SECRET,
+    secret: 'secretsauce',
     cookie: {},
     resave: false,
     saveUninitialized: true,
