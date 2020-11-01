@@ -1,23 +1,35 @@
- <div>
-    <section class="wrapper">
-        <div>
-            <h2 class='banner'>Edit Post</h2>
-            <div class="logint">
-            <form class="login-form">
-                <div>
-                    <label for="post-title">Post Title</label><br>
-                    <input  class="login" type="text" id="post-title" name="post-title" />
-                </div>
-                <div>
-                    <label for="post-url">Post Link</label><br>
-                    <input  class="login"type="text" id="post-url" name="post-url" />
-                </div>
-                <div>
-                    <label for="post-comment">Comments</label><br>
-                    <textarea >Edit Comments go here</textarea><br>
-                </div>
-                <button type="button" class="btn">Edit Post</button>
-            </form>            
-        </div>            
-    </section>
-</div>
+<article>
+  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <h2>
+    Edit Post
+  </h2>
+  <form class="edit-post-form">
+    <div>
+      <input name="post-title" type="text" value="{{post.title}}" />
+      <textarea name='post-content' id="post-content">{{post.post_content}}</textarea>
+    </div>
+    <div>
+      Created by you on {{format_date post.created_at}}
+      |
+      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+    </div>
+    <button type="submit">Save post</button>
+    <button type="button" class="delete-post-btn">Delete post</button>
+  </form>
+</article>
+<article>
+  <form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+
+{{> comments post.comments}}
+</article>
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

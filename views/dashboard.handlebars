@@ -1,34 +1,12 @@
  <div>
-     <h2 class="center-text">Welcome {{user.username}}</h2>
-            <section class="wrapper">
-                <h2 class='banner'>Enter New Post</h2>
-                    <div class="login">
-                    <form class="new-post-form">
-                        <div>
-                            <label for="post-title">Post Title</label><br>
-                            <input  class="new-post" type="text" id="post-title" name="post-title" />    
-                        </div>
-                        {{!-- <div>
-                            <label for="post-url">Post Link</label><br>
-                            <input  class="new-post" type="text" id="post-url" name="post-url" />
-                        </div> --}}
-                        <div>
-                            <label for="post-content">Post Content</label><br>
-                            <textarea name='post-content' id="post-content"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Create Post</button>
-                    </form>
-                </div>
-            </section>
+     <h2 class="center-text">Welcome</h2>
+           <a href="/dashboard/new" class="">Create New Blog Post</a>
     </div>
         <div>
-            <!--this is not working! -->
         {{#if posts.length}}
         <h2 class='banner'>My Posts</h2>
             <section class="wrapper">
                 {{#each posts as |post|}}
-                
-                
                 <ol>
                     <li class="comment">
                         {{> post-info post}}
@@ -40,5 +18,4 @@
             {{/if}}
             
         <script src="/javascript/add-post.js"></script>
-       
-            </div>
+</div>

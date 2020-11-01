@@ -20,7 +20,6 @@ router.get('/signup', (req,res) => {
     res.render('signup');
 });
 
-
 //root code
 router.get('/', (req, res) => {
     console.log(req.session);
