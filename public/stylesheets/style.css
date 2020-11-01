@@ -30,8 +30,6 @@ header {
     
 }
 
-
-
 h1,h2,h3,h4,h5 {
     padding: 5px;
 }
@@ -46,6 +44,15 @@ a {
 }
 a:hover{
     color:var(--accent);
+}
+.edit-link {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--light);
+    padding: .25em;
+    font-size: .75em;
+    border-radius: 5px;
+    margin:5px;
 }
 .wrapper {
     width: 100%;
@@ -110,7 +117,7 @@ li {
     padding: 1%;
     margin-bottom: 1%;
     color: var(--dark);
-    font-size: 1.25em;
+    font-size: 1em;
 }
 .comment:nth-child(odd) {
     background-color: var(--light);
@@ -162,6 +169,11 @@ nav {
     margin: 5px;
 }
 .new-post-form input{
+    min-width: 40%;
+    margin: 5px;
+}
+
+.edit-post-form input {
     min-width: 40%;
     margin: 5px;
 }

@@ -1,11 +1,16 @@
+<section class="wrapper">
+
+
+
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
-    Edit Post
-  </h2>
+  <a class="btn" href="/dashboard">Back to dashboard</a>
+  <h2 class='banner'>Edit Post</h2>
+  <div class="login"> 
   <form class="edit-post-form">
     <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
+      <input class="new-post" name="post-title" type="text" value="{{post.title}}" />
+    </div>
+    <div>
       <textarea name='post-content' id="post-content">{{post.post_content}}</textarea>
     </div>
     <div>
@@ -13,23 +18,26 @@
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button class='btn' type="submit">Save post</button>
+    <button type="button" class="delete-post-btn btn">Delete post</button>
   </form>
+  </div>
 </article>
 <article>
+  <h2 class='banner'>Add Comments</h2>
   <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
   </div>
 
   <div>
-    <button type="submit">add comment</button>
+    <button class='btn' type="submit">add comment</button>
   </div>
 </form>
 
 {{> comments post.comments}}
 </article>
+</section>
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>
